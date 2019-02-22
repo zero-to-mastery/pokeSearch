@@ -1,4 +1,38 @@
 .list-group .list-group-item{
     background-color: #396BBA;
     font-weight: bold;
+    position: relative;
+}
+
+.btn {
+  background-color: #f9a96d !important;
+  color: #396BBA !important;
+  position: fixed;
+  top: 60vh;
+  z-index: 1;
+}
+
+.btn:hover {
+  background-color: #f9a96d !important;
+  color: #396BBA;
+}
+
+.btn:active {
+  background-color: #f9a96d !important;
+  color: #FFE031;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.list-child {
+  flex: 1 0 30%;
+  width: 250px;
+}
+
+.scroll {
+  background-color: rgba(249, 169, 109, 0.5);
 }
