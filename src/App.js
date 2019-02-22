@@ -4,7 +4,7 @@ import SearchPokemon from './SearchPokemon/SearchPokemon';
 import PokemonInfo from './PokemonInfo/PokemonInfo';
 import Pokedex from 'pokedex-promise-v2';
 import Nav from './Nav/Nav';
-const P = new Pokedex() 
+const P = new Pokedex()
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class App extends Component {
     console.log(e.target.value, 'state of target value inside handleChange')
     this.setState({searchFor: e.target.value})
   }
-  
+
   componentDidMount() {
     console.log('check')
   }
@@ -61,7 +61,7 @@ class App extends Component {
         console.log('OH NOOO ', err)
       })
     }
-   
+
   }
 
   render() {
@@ -69,7 +69,7 @@ class App extends Component {
       <div className="App container" >
         <Nav />
         <SearchPokemon onChange={this.handleChange} onSubmit = {this.handleSubmit} variant='outline-primary'/>
-        <PokemonInfo pokemonData = {this.state.pokemon}/>
+        <PokemonInfo pokemonData = {this.state.pokemon} check ={this.state.checked} checkMoves = {this.state.pokemon.moves}/>
       </div>
     );
   }
